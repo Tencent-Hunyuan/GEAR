@@ -1,0 +1,27 @@
+# Loss config for src Stage 1.
+# Mirrors REPA-E/configs/l1_lpips_kl_gan.yaml but the kl branch is gone
+# (since this codebase is VQ); the quantizer_weight now multiplies
+# (vq_loss + commit_loss + entropy_weight * entropy_loss).
+
+losses:
+  reconstruction_loss: "l1"
+  reconstruction_weight: 1.0
+
+  perceptual_loss: "lpips"        # see src/losses/perceptual_loss.py
+  perceptual_weight: 1.0
+
+  # GAN
+  discriminator_start: 0          # start the discriminator from step 0
+  discriminator_factor: 1.0
+  discriminator_weight: 0.1
+  lecam_regularization_weight: 0.0
+  lecam_ema_decay: 0.999
+
+  # VQ-side
+  quantizer_weight: 1.0
+  entropy_weight: 1.0             # extra multiplier on top of VectorQuantizer.entropy_loss_ratio
+
+  # Convenience: Stage 1 VAE-side REPA-align coef can also live here, but
+  # we currently expose it as a CLI flag (--vae-align-proj-coeff) so it
+  # stays close to the REPA-E setup.
+  proj_coef: 0.0

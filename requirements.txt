@@ -1,0 +1,40 @@
+# GEAR core dependencies (training + inference + the in-repo GPIC FD-DINOv2 eval).
+#
+# PyTorch is intentionally NOT listed here -- install it first, matched to your
+# CUDA, e.g.:
+#   conda create -n gear python=3.13 -y && conda activate gear
+#   pip install torch==2.10.0 torchvision==0.25.0 torchaudio==2.10.0 \
+#       --index-url https://download.pytorch.org/whl/cu128
+# then:  pip install -r requirements.txt
+#
+# The external benchmark scorers run in their OWN environments (see the per-bench
+# READMEs under repae_vq/eval/): GenEval (mmdet/mmcv/open_clip), DPG-Bench
+# (mPLUG/modelscope), WISE (vLLM judge -> `pip install vllm`), and the ADM
+# ImageNet evaluator (TensorFlow). They are deliberately not pinned here.
+
+accelerate==1.1.1
+transformers==4.56.2
+diffusers==0.37.1
+timm==1.0.24
+huggingface-hub==0.36.0
+safetensors==0.7.0
+datasets==4.4.2
+
+einops==0.8.1
+omegaconf==2.3.0
+PyYAML==6.0.3
+numpy==2.4.1
+scipy==1.17.0
+scikit-image==0.26.0
+scikit-learn==1.8.0
+pandas==2.3.3
+pyarrow==22.0.0
+pillow==11.3.0
+matplotlib==3.10.8
+
+webdataset==1.0.2
+torchmetrics==1.9.0
+wandb==0.23.1
+tqdm==4.67.1
+termcolor==3.3.0
+requests==2.32.5
