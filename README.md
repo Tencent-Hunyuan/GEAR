@@ -4,8 +4,7 @@
   <a href="README.md"><img src="https://img.shields.io/badge/English-README-2f6df0.svg" alt="English"></a>
   <a href="README_zh.md"><img src="https://img.shields.io/badge/中文-说明-c0392b.svg" alt="中文"></a>
   <a href="https://linb203.github.io/gear/"><img src="https://img.shields.io/badge/🏠-Homepage-1a73e8.svg" alt="Homepage"></a>
-  <a href=""><img src="https://img.shields.io/badge/arXiv-coming%20soon-b31b1b.svg?logo=arxiv" alt="arXiv"></a>
-  <a href=""><img src="https://img.shields.io/badge/🤗-Paper%20In%20HF-red.svg" alt="HF paper"></a>
+  <a href="https://arxiv.org/abs/2606.32039"><img src="https://img.shields.io/badge/arXiv-2606.32039-b31b1b.svg?logo=arxiv" alt="arXiv"></a>
   <a href="https://huggingface.co/collections/BinLin203"><img src="https://img.shields.io/badge/🤗-Models-blue.svg" alt="HF models"></a>
 </p>
 
@@ -288,10 +287,14 @@ Point each t2i driver at a model you trained with `train_t2i_gpic.sh` (`--ar-mod
 ## Citation
 
 ```bibtex
-@article{gear,
-  title   = {GEAR: Guided End-to-End AutoRegression for Image Synthesis},
-  author  = {GEAR authors},
-  year    = {2026}
+@misc{lin2026gearguidedendtoendautoregression,
+      title={GEAR: Guided End-to-End AutoRegression for Image Synthesis}, 
+      author={Bin Lin and Zheyuan Liu and Chenguo Lin and Sixiang Chen and Yunyang Ge and Yunlong Lin and Jianwei Zhang and Miles Yang and Zhao Zhong and Liefeng Bo and Li Yuan},
+      year={2026},
+      eprint={2606.32039},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2606.32039}, 
 }
 
 @article{ifsq_llamagenrepa,
